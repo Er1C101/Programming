@@ -1,0 +1,36 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.Image;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class snake {
+	private ImageIcon snaketitle;
+	public static void main(String[] args) {
+		
+		JFrame obj = new JFrame("Snake");
+		gameplay gameplay = new gameplay();
+		obj.setLayout(null);
+		
+		obj.setBounds(10, 10, 905, 700);
+		obj.setBackground(Color.DARK_GRAY);
+		obj.setResizable(false);
+		obj.setVisible(true);
+		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		obj.add(gameplay);
+		JButton b = new JButton("Test"); 
+		b.setBounds(50,50,90, 50);
+		//Image img = ImageIO.read(getClass().getResource("/assets/snaketitle.jpg"));
+		b.setIcon(new ImageIcon(getClass().getResource("/assets/snaketitle.jpg")));
+		obj.add(b);
+		
+		
+	}
+}

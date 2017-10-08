@@ -1,0 +1,29 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class snake {
+	
+	public static void main(String[] args) {
+		
+		JFrame obj = new JFrame("Snake");
+		gameplay gameplay = new gameplay();
+		
+		obj.setBounds(10, 10, 905, 700);
+		obj.setBackground(Color.DARK_GRAY);
+		obj.setResizable(false);
+		obj.setVisible(true);
+		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		obj.add(gameplay);
+		JButton b = new JButton("Test"); 
+		b.setBounds(25, 11, 100, 50);
+		obj.add(b);
+		
+		
+	}
+}

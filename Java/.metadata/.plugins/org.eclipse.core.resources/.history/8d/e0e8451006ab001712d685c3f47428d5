@@ -1,0 +1,33 @@
+import java.awt.BorderLayout;
+import java.awt.Color;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.GridLayout;
+import java.awt.Image;
+
+import javax.imageio.ImageIO;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+
+
+public class snake {
+	private static final int NONE = 0;
+
+	public static void main(String[] args) {
+		
+		// JFrame
+		JFrame obj = new JFrame("Snake");
+		gameplay gameplay = new gameplay();	
+		obj.setBounds(10, 10, 905, 700);
+		obj.setBackground(Color.DARK_GRAY);
+		obj.setResizable(false);
+		obj.setVisible(true);
+		obj.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		obj.add(gameplay);	
+		
+	}
+}
